@@ -1,0 +1,15 @@
+# Copyright 2021 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: 'Build Silakka54'
+on:
+  - workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    with:
+      keyboard: '["silakka54"]'
+      merge: '[
+        "qmk/qmk_firmware/master",
+        "qmk/qmk_firmware/develop"
+      ]'
